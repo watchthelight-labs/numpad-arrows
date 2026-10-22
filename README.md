@@ -1,9 +1,5 @@
 # numpad-arrows
 
-> **Heads up:** a good portion of this code is AI generated. I do understand how it works,
-> and I'm happy to explain any of it. If something looks wrong or you have a question,
-> open an issue or ping me on Discord (`watchthelight`).
-
 A small macOS event tap that turns numpad 1, 5, 2 and 3 into the Left, Up, Down and Right arrow keys. It runs as a user LaunchAgent, needs Accessibility permission, and is about 60 lines of C with no driver and no kext.
 
 I wrote it because the arrow keys on my Lenovo Legion 5 15IAX10 are a hardware fault, and the usual fix, `hidutil property --set '{"UserKeyMapping":...}'`, does nothing on that keyboard. It is the ITE 8258 USB keyboard, which macOS publishes with a vendor usage instead of the keyboard usage, so the HID keyboard filter that applies `UserKeyMapping` never attaches to it. An event tap sits after all of that, in the window server's event stream, so it works for any keyboard.
