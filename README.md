@@ -1,4 +1,6 @@
-# numpad-arrows
+# WTLNumpadKeys
+
+Renamed from `numpad-arrows` on 2026-10-31; the tool is still `numpad-arrows-tap`. Old links redirect here.
 
 A small macOS event tap that turns numpad 1, 5, 2 and 3 into the Left, Up, Down and Right arrow keys. It runs as a user LaunchAgent, needs Accessibility permission, and is about 60 lines of C with no driver and no kext.
 
